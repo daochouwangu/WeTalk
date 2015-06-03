@@ -1,0 +1,44 @@
+<!--<div id="scrollbar">
+    <div class="handle"></div>
+</div>-->
+<link href='themes/glowsimple/default.css' rel='stylesheet' type='text/css'>
+
+<script src='lib/socket.io.min.js' type='text/javascript'></script>
+<script src='lib/jquery-1.11.3.min.js' type='text/javascript'></script>
+<script src="lib/init.js" type='text/javascript'></script>
+ <script src="lib\simplewebrtc.bundle.js"></script>
+<script type="text/javascript" charset="UTF-8" src="lib/prefixfree.min.js"></script>
+<div id="webrtc">
+        <p id="subTitle"></p>
+        <div class="videoContainer">
+            <video id="localVideo" style="height: 150px;" oncontextmenu="return false;"></video>
+            <div id="localVolume" class="volume_bar"></div>
+        </div>
+        <div id="remotes"></div>
+    </div>
+    <div>
+      <button id="disconnet">断开连接</button>
+      <button id="stoplocal">停止视频</button>
+      <button id="startlocal">开始视频</button>
+    </div>
+    <!-- <div id="userlist">
+        <button id="getuserlist">用户列表</button>
+    </div> -->
+  </div>
+<div id='content'>
+  <div id='room'></div>
+  <div id='room-list'></div>
+  <div id='messages'></div>
+
+  <form id='send-form'>
+    <input id='send-message' />
+    <input id='send-button' type='submit' value='Send'/>
+
+    <div id='help'>
+      聊天命令:
+      <ul>
+        <li>加入/创建 房间: <code>/join [教室名]</code></li>
+      </ul>
+    </div>
+  </form>
+</div>

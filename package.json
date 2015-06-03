@@ -1,0 +1,52 @@
+{
+  "name": "simplewebrtc",
+  "version": "1.15.4",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:henrikjoreteg/SimpleWebRTC.git"
+  },
+  "main": "./simplewebrtc.js",
+  "description": "World's easiest webrtc",
+  "dependencies": {
+    "express": "3.0.6",
+    "ejs": "latest",
+    "mongoose": "latest",
+    "colors": "latest",
+    "mongodb": "latest",
+    "connect-mongo": "latest",
+    "connect-flash": "latest",
+    "requirejs": "latest",
+    "webrtcsupport": "^1.0.0",
+    "wildemitter": "1.x",
+    "socket.io-client": "0.9.16",
+    "attachmediastream": "1.0.1",
+    "webrtc": "1.14.x",
+    "mockconsole": "0.0.1",
+    "socket.io": "~0.9.6",
+     "mime": "~1.2.7"
+  },
+  "devDependencies": {
+    "should": "*",
+    "chai": "*",
+    "mocha": "*",
+    "rewire": "*",
+    "jscover": "*",
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-concat": "~0.1.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.4.2",
+    "express": "3.x.x",
+    "browserify": "2.22.0",
+    "precommit-hook": "0.3.x",
+    "request": "",
+    "uglify-js": "2.3.6"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "make test",
+    "test-cov": "make test-cov",
+    "updateLatest": "./scripts/updateLatest.sh"
+  }
+}

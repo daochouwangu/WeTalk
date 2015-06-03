@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-controller="LayoutController">
+<head>
+    <meta charset="utf-8">
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+        .videoContainer {
+                float:left;
+                /*display:inline;*/
+                /*position: relative;*/
+                width: 200px;
+                height: 150px;
+            }
+            .videoContainer video {
+                /*position: absolute;*/
+                width: 200px;
+                height: 150px;
+            }
+            .volume_bar {
+                position: absolute;
+                width: 5px;
+                height: 0px;
+                right: 0px;
+                bottom: 0px;
+                background-color: #12acef;
+            }
+    </style>
+
+    <!--<script data-main="js/main" src="lib/require/require-2.1.0.js"></script>-->
+   
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NJBlog,Base on Nodejs ">
+    <meta name="author" content="NJBlog">
+    <link rel='stylesheet' href='/css/style.css'></link>
+
+    <link rel="shortcut icon" href="">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" charset="UTF-8" src="lib/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--    <script type="text/javascript" charset="UTF-8" src="lib/angular/angular.js"></script>-->
+    <!--    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>-->
+    <!--<link rel='stylesheet' href='lib/bootstrap/css/bootstrap-responsive.css'/>-->
+    <link rel="stylesheet" href="css/base.css" type='text/css' media="all"/>
+    <link href='themes/glowsimple/default.css' rel='stylesheet' type='text/css'>
+    <script src="lib\jquery-1.11.3.min.js"></script>
+        <script src="lib\simplewebrtc.bundle.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="lib/prefixfree.min.js"></script>
+        <script src='lib/socket.io.min.js' type='text/javascript'></script>
+
+<script src='lib/jquery-1.11.3.min.js' type='text/javascript'></script>
+<script data-main="js/main-built" src="lib/require/require.min.js"></script>
+
+</head>
+
+
+<body class="ng-cloak" ng-cloak>
+<div id="njblogbg">
+<div class="wrap_top_nav">
+    <nav id="top_nav">
+        <input type="hidden" id="username" value="{{signup.name}}"/>
+        <ul class="inline-style clearfix">
+            
+            <li class="active"><a href="#/">{{txt.home}}</a></li>
+            <li class="active"><a href="#/{{login.url}}">{{login.name}}</a></li>
+            <li class="active"><a href="#/{{signup.url}}">{{signup.name}}</a></li>
+            <li class="active">
+                <a href="javascript:;" class="preview" ng-click="fullscreen()">幻灯片放映</a>
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
+    
+<div class="page" ng-view=""></div>
+</body>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+    document.body.innerHTML="<div style='color:red; margin:0 auto; font-size:18px;'>" +
+            "您的浏览器实在太老了！请更新最新的浏览器吧！" +
+            "<a href='http://download.microsoft.com/download/5/D/4/5D405568-02E9-414D-BA52-A8D9890C1D31/IE10-Windows6.1-zh-cn.exe' >IE10</a>" +
+            "|<a href='https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B0D7D90D0-1294-AFB2-9950-D49F3DDE4495%7D%26lang%3Dzh-TW%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeSetup.exe'>chrome</a>"+
+            "</div>";
+</script>
+<![endif]-->
+</html>
