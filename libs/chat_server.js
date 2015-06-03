@@ -20,9 +20,6 @@ exports.listen = function(server) {
     handleClientDisconnection(socket, nickNames, namesUsed);
   });
 };
-function getcurrentRoom = function(name){
-  
-};
 function assignGuestName(socket, guestNumber, nickNames, namesUsed) {
   var name = 'Guest' + guestNumber;
   nickNames[socket.id] = name;
